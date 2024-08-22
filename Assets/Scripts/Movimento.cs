@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movimento : MonoBehaviour
 {
-
+    public bool comVida = true;
     public float moveH;
     public int velocidade;
     public int forcaPulo;
@@ -39,6 +39,26 @@ public class Movimento : MonoBehaviour
         else
         {
             animPlayer.SetLayerWeight(1,0);   
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            rb.AddForce(transform.up * forcaPulo,ForceMode2D.Impulse);
+            isJumping = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Chão"))
+        {
+            isJumping = false;
+        }
+
+        if(other.gameObject.CompareTag("Morte"))
+        {
+            comVida = false;
+            Destroy(other.gameObject);
         }
     }
 }
