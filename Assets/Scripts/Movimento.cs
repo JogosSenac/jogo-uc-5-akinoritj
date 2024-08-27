@@ -23,15 +23,6 @@ public class Movimento : MonoBehaviour
         moveH = Input.GetAxis("Horizontal");
         transform.position += new Vector3(moveH * velocidade * Time.deltaTime, 0, 0);
 
-        if(Input.GetKey(KeyCode.W))
-        {
-            animPlayer.SetLayerWeight(2,1);
-        }
-        else
-        {
-            animPlayer.SetLayerWeight(2, 0);
-        }
-
         if(Input.GetKey(KeyCode.D))
         {
             animPlayer.SetLayerWeight(1,1);
@@ -39,6 +30,15 @@ public class Movimento : MonoBehaviour
         else
         {
             animPlayer.SetLayerWeight(1,0);   
+        }
+
+        if(Input.GetKey(KeyCode.Space))
+        {
+            animPlayer.SetLayerWeight(2,1);
+        }
+        else
+        {
+            animPlayer.SetLayerWeight(2, 0);
         }
 
         if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
@@ -57,8 +57,8 @@ public class Movimento : MonoBehaviour
 
         if(other.gameObject.CompareTag("Morte"))
         {
-            comVida = false;
-            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+            
         }
     }
 }

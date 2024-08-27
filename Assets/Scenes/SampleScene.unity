@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30ec67df4ad91141b2329f5ff66e240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 2
+  velocidade: 3
 --- !u!1 &255985211
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 255985213}
   m_Layer: 0
   m_Name: Chao_Parede
-  m_TagString: Untagged
+  m_TagString: "Ch\xE3o"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2481,7 +2481,7 @@ GameObject:
   - component: {fileID: 845122536}
   m_Layer: 0
   m_Name: Morte
-  m_TagString: Untagged
+  m_TagString: Morte
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2495,7 +2495,7 @@ Transform:
   m_GameObject: {fileID: 845122534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.26, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2559,6 +2559,7 @@ GameObject:
   - component: {fileID: 1892839045}
   - component: {fileID: 1892839046}
   - component: {fileID: 1892839047}
+  - component: {fileID: 1892839048}
   m_Layer: 5
   m_Name: Main Character
   m_TagString: Untagged
@@ -2701,10 +2702,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3015da29ce429d42a09cf4751fb0cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  comVida: 1
   moveH: 0
-  velocidade: 5
-  forcaPulo: 3
+  velocidade: 8
+  forcaPulo: 7
   isJumping: 0
+--- !u!50 &1892839048
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892839041}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2061341980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,7 +2760,7 @@ Transform:
   m_GameObject: {fileID: 2061341980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0219, y: -0.0265, z: 10}
+  m_LocalPosition: {x: -0.797, y: -0.9141, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2783,7 +2812,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 14.77, y: 9.6}
+  m_Size: {x: 19.514202, y: 12.984029}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
